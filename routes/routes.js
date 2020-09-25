@@ -5,9 +5,10 @@ let router = express.Router();
 let HomeController = require("../controllers/HomeController");
 
 router.get("/", HomeController.index);
-router.get("/ocorrencia", HomeController.findOne);
-router.get("/tabelascad", HomeController.findTablesCad);
-router.get("/tabelasreporting", HomeController.findTablesReporting);
-router.get("/tabelasrel", HomeController.getTablesRelated);
+router.get("/listaocorrencia", HomeController.listEvent);
+router.get("/tabelascad", HomeController.listTableCad);
+router.get("/tabelasreporting", HomeController.listTableRep);
+router.get("/colunasreporting", HomeController.listColumnRep);
+router.get("/telasrelacionadas", HomeController.showRelatedTables);
 
 module.exports = router;
